@@ -18,6 +18,6 @@ be wiped out when you update Spree.
 Enjoy!
 ------
 
-Copyright (c) 2007-2009, Justin W. Reagor and Kinetic Web Solutions LLC
-All rights reserved.
-Check LICENSE before application
+Copyright (c) 2007-2009, Justin W. Reagor and Kinetic Web Solutions LLC  
+All rights reserved.  
+Check LICENSE before application  
