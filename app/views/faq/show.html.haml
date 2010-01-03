@@ -1,0 +1,23 @@
+%h1
+  Frequently Asked Questions
+
+%ol.questions
+  - @object.each do |question|
+
+    %li{ :id => dom_id(question) }
+      %em
+        = h question.title
+      %p
+        = h question.answer
+
+      - unless question.products.empty?
+
+        %strong
+          Referenced:
+        
+          - question.products.each do |product|
+            = link_to(product.name.titlecase, product) + (question.products.last == product ? "" : ",")
+        
+          
+      
+      

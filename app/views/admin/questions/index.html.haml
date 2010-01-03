@@ -1,0 +1,31 @@
+%h1
+  Listing FAQ Questions
+
+.toolbar
+  %ul.actions
+    %li
+      = button_link_to t("new_question"), new_object_url, :icon => 'add'
+
+  %br.clear
+
+%table.index
+
+  %thead
+    %th
+      Title
+    %th
+      Action
+
+  %tbody
+    - @collection.each do |question|
+
+      %tr{:id => dom_id(question.id)}
+
+        %td
+          = h question.title
+        %td
+          = link_to_edit   question
+          \&nbsp;
+          = link_to_delete question
+      
+= will_paginate :prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;"

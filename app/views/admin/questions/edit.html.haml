@@ -1,0 +1,12 @@
+%h1
+  = t("edit_question")
+
+- form_for [:admin, @object] do |f|
+
+  = f.error_messages
+
+  = render :partial => "form", :locals => { :f => f }
+  
+  .form-buttons
+    = button t("create")
+    = link_to t("cancel"), collection_url
